@@ -9,7 +9,7 @@ public class MoveForward : MonoBehaviour
     }
 
     public float speed = 40.0f;
-    public GameObject projectilePrefeb; 
+    public GameObject projectilePrefab; 
 
 
     // Update is called once per frame

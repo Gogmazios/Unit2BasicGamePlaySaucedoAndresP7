@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
+    public GameObject projectilePrefab;
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 10; 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         //Launch sandwhich 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-        //    Instantiate()
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
 }

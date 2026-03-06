@@ -3,7 +3,7 @@ using UnityEngine;
 public class DestroyOutOfBounds : MonoBehaviour
 {
     private float topBound = 50;
-    private float lowerBound = -20; 
+    private float lowerBound = -90; 
 
 
 
@@ -17,13 +17,48 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z > topBound)
+        if (gameObject.name == "Food_Sandwich_01(Clone)")
         {
-            Destroy(gameObject); 
+            if (transform.position.z > topBound)
+            {
+                Destroy(gameObject);
+            }
         }
-        else if (transform.position.z < lowerBound)
+
+       else if (gameObject.name == "Chick                 baby chicken Variant(Clone)")
         {
-            Destroy(gameObject);
+            if (transform.position.z < lowerBound)
+            {
+                Destroy(gameObject);
+            }
         }
+
+        else if (gameObject.name == "Chicken-Brown Variant(Clone)")
+        {
+            if (transform.position.z < lowerBound)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        else if (gameObject.name == "Chicken-White Variant(Clone)")
+        {
+            if (transform.position.z < lowerBound)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        else if (gameObject.name == "Rooster  Variant(Clone)")
+        {
+            if (transform.position.z < lowerBound)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+
+
+
     }
 }

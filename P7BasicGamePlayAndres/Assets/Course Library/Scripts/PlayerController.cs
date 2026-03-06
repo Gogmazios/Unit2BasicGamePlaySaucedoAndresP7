@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public float horizontalInput;
     public float speed = 10.0f;
-    public float xRange = 10; 
+    public float xRange = 15; 
     // Update is called once per frame
     void Update()
     {

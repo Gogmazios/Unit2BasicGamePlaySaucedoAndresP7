@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class Destoryallother : MonoBehaviour
+
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,15 +13,13 @@ public class Destoryallother : MonoBehaviour
     void Update()
     {
         
+
     }
 
-    //turn the chickens into a KFC bucket
     void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
     }
-
-
 
 
 }

@@ -12,6 +12,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     private float XleftBound = -35;
     private float XrightBound = 35;
 
+    private float sideBound = 30; 
 
 
 
@@ -46,6 +47,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
+                Debug.Log("Game Over!");
                 Destroy(gameObject);
             }
         }
@@ -54,6 +56,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
+                Debug.Log("Game Over!");
                 Destroy(gameObject);
             }
         }
@@ -62,6 +65,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
+                Debug.Log("Game Over!");
                 Destroy(gameObject);
             }
         }
@@ -70,6 +74,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
+                Debug.Log("Game Over!");
                 Destroy(gameObject);
             }
         }
@@ -187,6 +192,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
+                Debug.Log("Game Over!");
             }
         }
 
@@ -195,6 +201,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
+                Debug.Log("Game Over!");
             }
         }
 
@@ -203,6 +210,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
+                Debug.Log("Game Over!");
             }
         }
 
@@ -211,6 +219,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
+                Debug.Log("Game Over!");
             }
         }
 

@@ -276,6 +276,9 @@ MonoBehaviour:
   - {fileID: 1272347961414248365, guid: 89dc2c2591d1aa34fa4fe5bcfafd76e7, type: 3}
   spawnRangeX: -30
   spawnPosZ: -5
+  sideSpawnMinZ: 0
+  sideSpawnMaxZ: 0
+  sideSpawnX: 0
 --- !u!4 &298485761
 Transform:
   m_ObjectHideFlags: 0
@@ -308,6 +311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -330,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 95.4
+      value: 44.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -383,6 +390,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1680140994}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1680140998}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1680140997}
   m_SourcePrefab: {fileID: 100100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
 --- !u!1001 &333974488
 PrefabInstance:
@@ -899,6 +912,9 @@ MonoBehaviour:
   - {fileID: 1272347961414248365, guid: 89dc2c2591d1aa34fa4fe5bcfafd76e7, type: 3}
   spawnRangeX: 30
   spawnPosZ: 5
+  sideSpawnMinZ: 3
+  sideSpawnMaxZ: 15
+  sideSpawnX: 30
 --- !u!4 &615089563
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,6 +1200,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732670941}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &757241489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757241490}
+  m_Layer: 0
+  m_Name: FoodSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757241490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757241489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.5, z: 72.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &785889158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 223320151086501357, guid: b7179c8938c730d4889e9b39d79ff327, type: 3}
@@ -1251,6 +1298,9 @@ MonoBehaviour:
   - {fileID: 1272347961414248365, guid: 89dc2c2591d1aa34fa4fe5bcfafd76e7, type: 3}
   spawnRangeX: 30
   spawnPosZ: -30
+  sideSpawnMinZ: 0
+  sideSpawnMaxZ: 0
+  sideSpawnX: 0
 --- !u!4 &796212675
 Transform:
   m_ObjectHideFlags: 0
@@ -1643,7 +1693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 223320151086666189, guid: b7179c8938c730d4889e9b39d79ff327, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -55.499992
+      value: 95.3
       objectReference: {fileID: 0}
     - target: {fileID: 223320151086666189, guid: b7179c8938c730d4889e9b39d79ff327, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1810,10 +1860,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc48a208b79b2f041872642e4642740f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpawnPoint: {fileID: 1680140996}
   projectilePrefab: {fileID: 785889158}
   horizontalInput: 0
   speed: 30
   xRange: 50
+  zMin: 3
+  zMax: 90
+  verticallnput: 0
+--- !u!4 &1680140996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
+  m_PrefabInstance: {fileID: 327206861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1680140997
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680140993}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1680140998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680140993}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.78682, z: 1}
+  m_Center: {x: -0, y: 1.39341, z: 0}
 --- !u!1 &1698497111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 223320151086501357, guid: b7179c8938c730d4889e9b39d79ff327, type: 3}
@@ -2191,6 +2298,9 @@ MonoBehaviour:
   - {fileID: 1272347961414248365, guid: 89dc2c2591d1aa34fa4fe5bcfafd76e7, type: 3}
   spawnRangeX: -30
   spawnPosZ: 30
+  sideSpawnMinZ: 0
+  sideSpawnMaxZ: 0
+  sideSpawnX: 0
 --- !u!4 &2060800198
 Transform:
   m_ObjectHideFlags: 0
@@ -2644,3 +2754,4 @@ SceneRoots:
   - {fileID: 1951630919}
   - {fileID: 672780047}
   - {fileID: 383647188}
+  - {fileID: 757241490}

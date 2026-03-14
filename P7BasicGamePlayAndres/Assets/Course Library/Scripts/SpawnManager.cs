@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour
         {
 
         }
+        Time.timeScale = 1f;
     }
 
 

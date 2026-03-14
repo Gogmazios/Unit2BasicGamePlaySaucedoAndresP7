@@ -1,3 +1,4 @@
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
@@ -12,14 +13,15 @@ public class DestroyOutOfBounds : MonoBehaviour
     private float XleftBound = -35;
     private float XrightBound = 35;
 
-    private float sideBound = 30; 
+    private float sideBound = 30;
+    private GameMananger gameManager;
 
-
-
+ //   Food_Banana_01
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameMananger>();
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -43,11 +45,20 @@ public class DestroyOutOfBounds : MonoBehaviour
             }
         }
 
+        if (gameObject.name == "Food_Banana_01(Clone)")
+        {
+            if (transform.position.z < ZlowerBound)
+            {
+                Destroy(gameObject);
+            }
+        }
+
         else if (gameObject.name == "Chick                 baby chicken Variant(Clone)")
         {
             if (transform.position.z > ZtopBound)
             {
-                Debug.Log("Game Over!");
+                //Debug.Log("Game Over!");
+                gameManager.AddLives(-1); 
                 Destroy(gameObject);
             }
         }
@@ -56,7 +67,8 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
-                Debug.Log("Game Over!");
+                //  Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
                 Destroy(gameObject);
             }
         }
@@ -65,7 +77,8 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
-                Debug.Log("Game Over!");
+                // Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
                 Destroy(gameObject);
             }
         }
@@ -74,7 +87,8 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             if (transform.position.z > ZtopBound)
             {
-                Debug.Log("Game Over!");
+                //Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
                 Destroy(gameObject);
             }
         }
@@ -192,7 +206,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
-                Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
             }
         }
 
@@ -201,7 +215,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
-                Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
             }
         }
 
@@ -210,7 +224,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
-                Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
             }
         }
 
@@ -219,7 +233,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (transform.position.x > XrightBound)
             {
                 Destroy(gameObject);
-                Debug.Log("Game Over!");
+                gameManager.AddLives(-1);
             }
         }
 
